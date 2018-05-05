@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizzes</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Los quizzes en la base de datos son : 
+    	<a href="/">Inicio</a>
+		<a href="/credits">Creditos</a>
+	</h1>
+	<ul>
+    <% for (var i in quizzes) { %>
+    <% var quiz = quizzes[i]; %>
+        <li>
+            <%= quiz.question%> : <%= quiz.answer %>
+        </li>
+    <% } %>
+</ul>
+  </body>
+</html>
